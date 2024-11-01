@@ -55,11 +55,11 @@ def SaveAsAudioClassificationModel(DataSetPath, NumMfcc=25, NumFft=2048, HopLeng
     model.add(keras.layers.MaxPool2D((5, 5), strides=(2, 2), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
-    model.add(keras.layers.Conv2D(32, (3, 3), activation='relu'))
+    model.add(keras.layers.Conv2D(64, (3, 3), activation='relu'))
     model.add(keras.layers.MaxPool2D((3, 3), strides=(2, 2), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
-    model.add(keras.layers.Conv2D(32, (2, 2), activation='relu'))
+    model.add(keras.layers.Conv2D(128, (2, 2), activation='relu'))
     model.add(keras.layers.MaxPool2D((2, 2), strides=(2, 2), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
